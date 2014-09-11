@@ -1,4 +1,4 @@
-# Current Plans for this Personal Knowledgebase
+# Current Plans
 ## Main Plans
 - House everything within this git repository under strict version control
 - Take notes in markdown, written in Vim
