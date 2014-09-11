@@ -1,5 +1,5 @@
 # Personal Knowledgebase
-# Author: Nick Dupoux (@njdup)
+## Author: Nick Dupoux [@njdup](https://github.com/njdup)
 
 Purpose
 =======
