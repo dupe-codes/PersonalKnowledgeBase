@@ -8,6 +8,7 @@
 - Write script to extract todo list from Todoist, have up to date here
     - Potentially replace use of Todoist with my own todo system?
 - Automate updating of todo list and conversion of markdown to HTML
+- Transfer over Evernote notes
 
 ## Fun Subplans
 - Write a live-streaming twitter feed script
