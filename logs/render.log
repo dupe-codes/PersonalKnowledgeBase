@@ -1,0 +1,8 @@
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com
+DEBUG:requests.packages.urllib3.connectionpool:"POST /markdown HTTP/1.1" 400 94
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com
+DEBUG:requests.packages.urllib3.connectionpool:"POST /markdown HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com
+DEBUG:requests.packages.urllib3.connectionpool:"POST /markdown HTTP/1.1" 200 None
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com
+DEBUG:requests.packages.urllib3.connectionpool:"POST /markdown HTTP/1.1" 200 None
