@@ -1,3 +1,5 @@
 # Filled with things for my eyes only
 Secret
-Secret/*
+
+# Ignore logging
+logs

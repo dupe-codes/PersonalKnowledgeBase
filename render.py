@@ -60,6 +60,7 @@ def main(arguments):
     if arguments[1] not in flags:
         print 'render.py: Invalid flag given'
         return
+
     if arguments[1] == '-d':
         # Render all markdown in given directory
         if len(arguments) != 3:
@@ -67,6 +68,7 @@ def main(arguments):
             return
         render_markdown_in_dir(arguments[2])
         return
+
     if arguments[1] == '-f':
         # Render specific file
         if len(arguments) != 3:
