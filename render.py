@@ -72,22 +72,68 @@ def render_markdown_in_dir(directory):
     print 'Rendering markdown in dir: ' + directory
     return
 
+def write_out_directory(current_dir, dir_tree, outfile, path_to):
+    """
+    Recursively writes out the directory tree
+
+    Links to .html files are created, and subdirs written out as lists
+    within the parent directory list element
+    """
+    outfile.write('<li>')
+
+    if '.html' in current_dir:
+        outfile.write('<a href=\'' + path_to + current_dir + '\'>' + current_dir + '</a>')
+    else:
+        directory = current_dir + '/'
+        outfile.write(directory)
+        sub_files = dir_tree[current_dir]
+        outfile.write('<ul>')
+        for sub_file in sub_files:
+            write_out_directory(sub_file, dir_tree, outfile, path_to + directory)
+        outfile.write('</ul>')
+
+    outfile.write('</li>')
+
 def make_table_of_contents(rendered):
     """ Renders the table of content page """
     # TODO: Replace this with a better, templatized approach
-    # TODO: Organize based on directory structure
     outfile = open(os.path.join(settings.RENDER_PATH, 'table_of_contents.html'), 'w')
     outfile.write('<h1>Table of Contents</h1>')
+
+    # Start recursive writing of directory tree from current directory
     outfile.write('<ul>')
-
-    for filepath in rendered:
-        # Extract name from filepath
-        pieces = filepath.split('/')
-        name = pieces[len(pieces) - 1][:-5]
-        # Write out link to file
-        outfile.write('<li><a href=\'' + filepath +'\'>' + name + '</a></li>')
-
+    write_out_directory('.', rendered, outfile, './')
     outfile.write('</ul>')
+
+    outfile.close()
+
+def sort_by_directories(files_list):
+    """
+    Sorts the given files list based on directories in which they reside
+
+    Returns a dict of directories mapped to files/subdirs within them
+    """
+    result = {}
+    for file_path in files_list:
+        while '/' in file_path:
+            # Split path on the first / character
+            split_path = file_path.split('/', 1)
+            directory = split_path[0]
+            file_path = split_path[1]
+
+            # Split again to get next piece, either file or subdir
+            next_file = file_path.split('/', 1)[0]
+
+            if directory not in result:
+                result[directory] = [next_file]
+            else:
+                current = result[directory]
+                # Only add in new child if its not already in list
+                if next_file not in current:
+                    result[directory].append(next_file)
+
+    return result
+
 
 
 def main(arguments):
@@ -101,7 +147,7 @@ def main(arguments):
         # Called with no additional args, render everything
         'render.py: Rendering all markdown files'
         rendered = render_all_markdown()
-        # TODO: Sort rendered based on parent directories
+        rendered = sort_by_directories(rendered)
         make_table_of_contents(rendered)
         return
 
