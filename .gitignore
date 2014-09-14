@@ -3,3 +3,6 @@ Secret
 
 # Ignore logging
 logs
+
+# Ignore compiled python files
+*.pyc

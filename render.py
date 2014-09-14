@@ -75,6 +75,7 @@ def render_markdown_in_dir(directory):
 def make_table_of_contents(rendered):
     """ Renders the table of content page """
     # TODO: Replace this with a better, templatized approach
+    # TODO: Organize based on directory structure
     outfile = open(os.path.join(settings.RENDER_PATH, 'table_of_contents.html'), 'w')
     outfile.write('<h1>Table of Contents</h1>')
     outfile.write('<ul>')
@@ -100,6 +101,7 @@ def main(arguments):
         # Called with no additional args, render everything
         'render.py: Rendering all markdown files'
         rendered = render_all_markdown()
+        # TODO: Sort rendered based on parent directories
         make_table_of_contents(rendered)
         return
 

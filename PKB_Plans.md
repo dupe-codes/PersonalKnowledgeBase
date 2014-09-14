@@ -10,6 +10,11 @@
     - Potentially replace use of Todoist with my own todo system?
 - Automate updating of todo list and conversion of markdown to HTML
 - Transfer over Evernote notes
+- Make embedded python system, something like `file.pymd` which compiles into markdown
+    - Allow creation of layouts, can extend layouts
+    - Dynamic creation of links?
+    - Create compiler as a python class
+        - In PKB, write 'compile' script which instantiates compiler object and uses it to compile all `*.pymd` files into markdown
 
 ## Quick Note Functionality
 - Create a simple app that saves quick notes into the PKB
