@@ -7,12 +7,15 @@ Uses the Github Markdown API
 import requests
 import json
 import sys
+import os
 import settings
 import logging
 
 # Configuration
-flags = ['-d', '-f']
+FLAGS = ['-d', '-f']
+EXTENSION = '.md'
 logging.basicConfig(filename='logs/render.log', level=logging.DEBUG)
+
 
 
 def render_markdown(md_file_path):
@@ -30,12 +33,36 @@ def render_markdown(md_file_path):
     params = {'text': content, 'mode': 'markdown'}
     response = requests.post(settings.GITHUB_API_URL + '/markdown', data=json.dumps(params))
 
-    print response.text
+    # Change to .html file
+    md_file_path = md_file_path.replace('.md', '.html')
+
+    # Write contents to destination path
+    write_file = open(os.path.join(settings.RENDER_PATH, md_file_path), 'w')
+    write_file.write(response.text)
+
+    # Return path to file created
+    return md_file_path
 
 
 def render_all_markdown():
+    """
+    Renders all markdown present in current directory and all subdirectories
+
+    Returns a list of paths to the rendered files
+    """
     print 'Rendering all markdown...'
-    return
+    rendered = []
+
+    # Run through and render all .md files in repo
+    for dirname, subdirs, files in os.walk('.'):
+        # First make render directory if it doesn't already exist
+        # NOTE: There's a race condition here. Should be okay though
+        if not os.path.exists(os.path.join(settings.RENDER_PATH, dirname)):
+            os.makedirs(os.path.join(settings.RENDER_PATH, dirname))
+
+        rendered += [render_markdown(dirname + '/' + fname) for fname in files if fname.lower().endswith(EXTENSION)]
+
+    return rendered
 
 
 def render_markdown_in_dir(directory):
@@ -53,11 +80,12 @@ def main(arguments):
     if len(arguments) == 1:
         # Called with no additional args, render everything
         'render.py: Rendering all markdown files'
-        render_all_markdown()
+        rendered = render_all_markdown()
+        print rendered
         return
 
     # Otherwise must have been called with specific flags
-    if arguments[1] not in flags:
+    if arguments[1] not in FLAGS:
         print 'render.py: Invalid flag given'
         return
 

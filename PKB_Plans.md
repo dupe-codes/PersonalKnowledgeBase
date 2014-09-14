@@ -10,5 +10,12 @@
 - Automate updating of todo list and conversion of markdown to HTML
 - Transfer over Evernote notes
 
+## Quick Note Functionality
+- Create a simple app that saves quick notes into the PKB
+- Request sent to server which contains note contents
+- Server forms markdown note and adds it to the repo
+- Automatically pushs to github
+- Incorporate categories to save notes in specific directories
+
 ## Fun Subplans
 - Write a live-streaming twitter feed script
