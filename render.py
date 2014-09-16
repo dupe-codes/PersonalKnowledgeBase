@@ -124,13 +124,8 @@ def sort_by_directories(files_list):
             # Split again to get next piece, either file or subdir
             next_file = file_path.split('/', 1)[0]
 
-            if directory not in result:
-                result[directory] = [next_file]
-            else:
-                current = result[directory]
-                # Only add in new child if its not already in list
-                if next_file not in current:
-                    result[directory].append(next_file)
+            # Create new set of files to map dir to, or add to existing
+            result.setdefault(directory, set([])).add(next_file)
 
     return result
 
