@@ -1,0 +1,14 @@
+<h1>
+<a name="user-content-python-notes" class="anchor" href="#python-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Notes</h1>
+
+<p>Tips, tricks, and knowledge acquired on my road to becoming a true Pythonista</p>
+
+<h1>
+<a name="user-content-useful-commands" class="anchor" href="#useful-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful Commands</h1>
+
+<h2>
+<a name="user-content-style-checks" class="anchor" href="#style-checks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Style Checks</h2>
+
+<pre><code>for FILE in `git diff --name-only HEAD~1 | grep '.py$'`; do pep8 $FILE; done
+for FILE in `git diff --name-only HEAD~1 | grep '.py$'`; do pylint $file; done
+</code></pre>

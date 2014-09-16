@@ -1,0 +1,45 @@
+<h1>
+<a name="user-content-git-notes" class="anchor" href="#git-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git Notes</h1>
+
+<h2>
+<a name="user-content-notes-on-git-and-how-to-best-use-all-of-its-awesomeness" class="anchor" href="#notes-on-git-and-how-to-best-use-all-of-its-awesomeness" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes on git and how to best use all of its awesomeness.</h2>
+
+<h2>
+<a name="user-content-useful-commands" class="anchor" href="#useful-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful Commands</h2>
+
+<table>
+<thead><tr>
+<th>Command</th>
+<th>Use</th>
+<th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>git rebase</td>
+<td>Used to place local commits on top of commits from another branch</td>
+<td>With -i, can be used to squash commits</td>
+</tr>
+<tr>
+<td>git diff --name-only</td>
+<td>Shows all files changed in set of commits</td>
+<td>Useful when you want to blast through them doing the same thing to each</td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>git cherry-pick</td>
+<td>Used to bring in a specific commit from another branch</td>
+<td></td>
+</tr>
+</tbody>
+</table><h2>
+<a name="user-content-tips-and-tricks" class="anchor" href="#tips-and-tricks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tips and Tricks</h2>
+
+<p>From mentor at work:</p>
+
+<blockquote>
+<p>Per recent conversation, @njdup and @SeWonJang, a handy bash alias for gitstuff: gitg is short for 'git get'. You can put the following code into your ~/.bashrc at the end and after you re-source your .bashrc, you should be able to start using it immediately. git get takes two mandatory parameters: a tree-ish (which can be a commit, a branch, a tag...) and a file path (relative to top of repo). The file named like 'bar/foo.sh' will be checked out by default as 'bar/foo.sh.lkg'. (lkg for 'last known good', and it also almost never conflicts with real file extensions....). You can also give a third parameter to specify the filename to write to. Beware, this doesnt check to see if the target file exists first</p>
+</blockquote>

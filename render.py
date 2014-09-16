@@ -58,6 +58,10 @@ def render_all_markdown():
 
     # Run through and render all .md files in repo
     for dirname, subdirs, files in os.walk('.'):
+        # Skip directory if it is part of a directory to be excluded
+        if any(excluded in dirname for excluded in settings.EXCLUDED):
+            continue
+
         # First make render directory if it doesn't already exist
         # NOTE: There's a race condition here. Should be okay though
         if not os.path.exists(os.path.join(settings.RENDER_PATH, dirname)):
@@ -97,7 +101,7 @@ def write_out_directory(current_dir, dir_tree, outfile, path_to):
 def make_table_of_contents(rendered):
     """ Renders the table of content page """
     # TODO: Replace this with a better, templatized approach
-    outfile = open(os.path.join(settings.RENDER_PATH, 'table_of_contents.html'), 'w')
+    outfile = open(os.path.join(settings.RENDER_PATH, 'index.html'), 'w')
     outfile.write('<h1>Table of Contents</h1>')
 
     # Start recursive writing of directory tree from current directory
