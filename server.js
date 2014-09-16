@@ -6,14 +6,18 @@
  */
 
  var express = require('express');
+ var path = require('path');
 
  var app = express();
+ app.set('showStackError', true);
 
+// Expose all rendered files to top-level domain
+app.use(express.static(path.join(__dirname, './Rendered/')));
 
 /* Render table of contents when home page requested */
 // TODO: Add ability to request specific pages, maybe include path in request?
 app.get('/', function(req, res) {
-    res.sendFile('./Rendered/index.html');
+    res.sendFile(path.resolve('./Rendered/index.html'));
 });
 
  // Basic error handling

@@ -7,3 +7,5 @@ logs
 
 # Ignore compiled python files
 *.pyc
+
+node_modules
