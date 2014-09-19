@@ -16,12 +16,20 @@
     - Create compiler as a python class
         - In PKB, write 'compile' script which instantiates compiler object and uses it to compile all `*.pymd` files into markdown
 
+- Add in spellchecking feature, runs through all markdown notes and spellchecks them
+
+- Pretty things up (add css)
+
 ## Quick Note Functionality
 - Create a simple app that saves quick notes into the PKB
     - Add in authentication so only I can access
 - Request sent to server which contains note contents
 - Server forms markdown note and adds it to the repo
+- Automatically re-render the updated PKB
 - Automatically pushs to github
+    - Need github auth for both.. so need to figure out how to get credentials
+    up on heroku safely
+        - Look in to setting heroku ENV variables and using those
 - Incorporate categories to save notes in specific directories
 
 ## Fun Subplans
