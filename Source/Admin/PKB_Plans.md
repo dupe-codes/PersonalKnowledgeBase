@@ -18,6 +18,7 @@
 
 ## Quick Note Functionality
 - Create a simple app that saves quick notes into the PKB
+    - Add in authentication so only I can access
 - Request sent to server which contains note contents
 - Server forms markdown note and adds it to the repo
 - Automatically pushs to github

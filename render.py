@@ -12,7 +12,7 @@ import logging
 import base64
 
 import settings
-import Secret.github_auth as auth
+import secrets as auth
 
 # Configuration
 FLAGS = ['-d', '-f']
@@ -39,6 +39,9 @@ def render_markdown(md_file_path):
     # Change to .html file
     md_file_path = md_file_path.replace('.md', '.html')
 
+    # Remove source directory from write path
+    md_file_path = md_file_path.replace(settings.SOURCE_PATH, './')
+
     # Write contents to destination path
     write_file = open(os.path.join(settings.RENDER_PATH, md_file_path), 'w')
     write_file.write(response.text)
@@ -57,17 +60,20 @@ def render_all_markdown():
     rendered = []
 
     # Run through and render all .md files in repo
-    for dirname, subdirs, files in os.walk('.'):
+    for dirname, subdirs, files in os.walk(settings.SOURCE_PATH):
         # Skip directory if it is part of a directory to be excluded
         if any(excluded in dirname for excluded in settings.EXCLUDED):
             continue
 
-        # First make render directory if it doesn't already exist
-        # NOTE: There's a race condition here. Should be okay though
-        if not os.path.exists(os.path.join(settings.RENDER_PATH, dirname)):
-            os.makedirs(os.path.join(settings.RENDER_PATH, dirname))
+        # Create destination directory, stripping source directory from path
+        write_path = os.path.join(settings.RENDER_PATH, dirname).replace(settings.SOURCE_PATH, './')
 
-        rendered += [render_markdown(dirname + '/' + fname) for fname in files if fname.lower().endswith(EXTENSION)]
+        # Make render directory if it doesn't already exist
+        # NOTE: There's a race condition here. Should be okay though
+        if not os.path.exists(write_path):
+            os.makedirs(write_path)
+
+        rendered += [render_markdown(os.path.join(dirname, fname)) for fname in files if fname.lower().endswith('.md')]
 
     return rendered
 

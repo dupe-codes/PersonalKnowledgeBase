@@ -20,6 +20,11 @@ app.get('/', function(req, res) {
     res.sendFile(path.resolve('./Rendered/index.html'));
 });
 
+app.get('/errorlog', function(req, res) {
+  res.send('Error logging will appear here');
+  // TODO: Figure out best way to handle logging on heroku app
+});
+
  // Basic error handling
  app.use(function(req, res, next) {
     var err = new Error('Not Found');
