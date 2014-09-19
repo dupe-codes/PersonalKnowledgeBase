@@ -12,4 +12,4 @@ SOURCE_PATH = 'Source/'
 RENDER_PATH = 'Rendered/'
 
 # Exclude all files in these directors when rendering
-EXCLUDED = ['Rendered', 'logs']
+EXCLUDED = ['Rendered', 'logs', 'Secret']
