@@ -16,7 +16,6 @@ import secrets as auth
 
 # Configuration
 FLAGS = ['-d', '-f']
-EXTENSION = '.md'
 logging.basicConfig(filename='logs/render.log', level=logging.DEBUG)
 
 
@@ -105,7 +104,7 @@ def write_out_directory(current_dir, dir_tree, outfile, path_to):
     outfile.write('</li>')
 
 def make_table_of_contents(rendered):
-    """ Renders the table of content page """
+    """ Renders the table of contents page """
     # TODO: Replace this with a better, templatized approach
     outfile = open(os.path.join(settings.RENDER_PATH, 'index.html'), 'w')
     outfile.write('<h1>Table of Contents</h1>')

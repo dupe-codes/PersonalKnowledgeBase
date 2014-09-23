@@ -16,6 +16,9 @@
     - Create compiler as a python class
         - In PKB, write 'compile' script which instantiates compiler object and uses it to compile all `*.pymd` files into markdown
 
+- Figure out how to expand render script to determine what files have changed and
+need re-rendering
+
 - Add in spellchecking feature, runs through all markdown notes and spellchecks them
 
 - Pretty things up (add css)
@@ -30,6 +33,12 @@
     - Need github auth for both.. so need to figure out how to get credentials
     up on heroku safely
         - Look in to setting heroku ENV variables and using those
+- UPDATE: Method above will not work (The filesystem in a heroku app is read-only, duh)
+    - New idea:
+        - Store quick note in mongoDB
+            - Can look through currently saved notes in mongo through a request sent to heroku app
+        - Then locally run a script that makes a separate request to the web app to get
+        new quicknotes and adds them to the PKB
 - Incorporate categories to save notes in specific directories
 
 ## Fun Subplans
