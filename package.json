@@ -9,7 +9,11 @@
     },
     "main": "server.js",
     "dependencies": {
-        "express": "4.5.x"
+        "express": "4.5.x",
+        "mongoose": "3.8.x",
+        "method-override": "2.0.x",
+        "body-parser": "1.4.x",
+        "morgan": "1.0.x"
     },
     "engine": "node 0.10.x"
 }
