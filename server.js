@@ -17,7 +17,7 @@ var app = express();
 app.set('showStackError', true);
 
 // Create database connection
-var db = mongoose.connect(config.db);
+//var db = mongoose.connect(config.db);
 
 // Expose all rendered files to top-level domain
 app.use(express.static(path.join(__dirname, './Rendered/')));
@@ -42,7 +42,7 @@ app.get('/errorlog', function(req, res) {
 });
 
 // Add routes for making quick notes
-app.use('/notes', require('./app/routes/notes'));
+//app.use('/notes', require('./app/routes/notes'));
 
  // Basic error handling
 app.use(function(req, res, next) {
