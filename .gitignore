@@ -9,5 +9,9 @@ logs
 # Ignore compiled python files
 *.pyc
 
+# Node stuff
 node_modules
 *.log
+
+# Editor artifacts
+*.swp
