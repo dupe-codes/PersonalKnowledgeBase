@@ -22,6 +22,11 @@ need re-rendering
 - Add in spellchecking feature, runs through all markdown notes and spellchecks them
 
 - Pretty things up (add css)
+- Expand table of contents page
+    - Make content pages for specific directories
+    - Link to content pages for specific dirs in overal content page
+    - Add navbar?
+- Update render script to automatically push to heroku app after rendering
 
 ## Quick Note Functionality
 - Create a simple app that saves quick notes into the PKB
