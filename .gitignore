@@ -10,3 +10,4 @@ logs
 *.pyc
 
 node_modules
+*.log
