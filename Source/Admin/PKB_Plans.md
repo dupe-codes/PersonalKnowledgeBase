@@ -48,3 +48,9 @@ need re-rendering
 
 ## Fun Subplans
 - Write a live-streaming twitter feed script
+
+## Possible ways to make this more powerful
+- Look into markdown syntax extensions (footnotes, super/subscripts, etc.)
+- Consider using pandoc to do conversion to html
+    - Or look into other tools
+- Look into adding support of LaTex embedded in the markdown
