@@ -28,6 +28,9 @@ need re-rendering
     - Add navbar?
 - Update render script to automatically push to heroku app after rendering
 
+- Maybe refactor all web app components into separate directory:
+    - "Server/"?
+
 ## Quick Note Functionality
 - Create a simple app that saves quick notes into the PKB
     - Add in authentication so only I can access
@@ -48,6 +51,7 @@ need re-rendering
 
 ## Fun Subplans
 - Write a live-streaming twitter feed script
+- Maybe incorporate a blogging platform, make this my personal blog?
 
 ## Possible ways to make this more powerful
 - Look into markdown syntax extensions (footnotes, super/subscripts, etc.)

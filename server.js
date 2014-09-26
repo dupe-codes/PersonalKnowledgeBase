@@ -11,16 +11,21 @@ var config = require('./config/config');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var swig = require('swig');
+var consolidate = require('consolidate');
 var logger = require('morgan');
 
 var app = express();
 app.set('showStackError', true);
 
 // Create database connection
-//var db = mongoose.connect(config.db);
+var db = mongoose.connect(config.db);
 
 // Expose all rendered files to top-level domain
 app.use(express.static(path.join(__dirname, './Rendered/')));
+
+// Expose public files in top level domain
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Set up logging
 app.use(logger('dev'));
@@ -29,6 +34,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride());
+
+app.set('views', path.join(__dirname, './app/views'));
+app.set('view engine', 'html');
+app.engine('html', consolidate.swig);
 
 /* Render table of contents when home page requested */
 // TODO: Add ability to request specific pages, maybe include path in request?
@@ -42,7 +51,7 @@ app.get('/errorlog', function(req, res) {
 });
 
 // Add routes for making quick notes
-//app.use('/notes', require('./app/routes/notes'));
+app.use('/notes', require('./app/routes/notes'));
 
  // Basic error handling
 app.use(function(req, res, next) {

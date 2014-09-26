@@ -12,4 +12,9 @@ router.post('/', QuickNoteController.addNote);
 // Get list of all notes
 router.get('/', QuickNoteController.getAllNotes);
 
+// Get page for creating a new note
+router.get('/new', function(req, res){
+  res.render('newNote');
+});
+
 module.exports = router;

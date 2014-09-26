@@ -13,5 +13,8 @@ logs
 node_modules
 *.log
 
+# Public installed packages
+public/lib
+
 # Editor artifacts
 *.swp
