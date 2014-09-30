@@ -1,4 +1,4 @@
-# Current Plans
+# Current Plan
 ## Main Plans
 - House everything within this git repository under strict version control
 - Take notes in markdown, written in Vim
@@ -30,6 +30,9 @@ need re-rendering
 
 - Maybe refactor all web app components into separate directory:
     - "Server/"?
+
+- Write utility script to do common tasks
+    - Such as "vim Source/Admin/PKB_Plans.md" to open this
 
 ## Quick Note Functionality
 - Create a simple app that saves quick notes into the PKB
