@@ -12,6 +12,8 @@
 - Transfer over Evernote notes
 - Make embedded python system, something like `file.pymd` which compiles into markdown
     - Allow creation of layouts, can extend layouts
+    - Allow creation of macros, preformatted snippets of markdown you can call to generate
+    that markdown when needed. Pass in parameters to customize the generated markdown
     - Dynamic creation of links?
     - Create compiler as a python class
         - In PKB, write 'compile' script which instantiates compiler object and uses it to compile all `*.pymd` files into markdown
