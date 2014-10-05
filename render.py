@@ -11,8 +11,8 @@ import os
 import logging
 import base64
 
-import settings
-import secrets as auth
+import config.settings as settings
+import config.secrets as auth
 
 # Configuration
 FLAGS = ['-d', '-f']

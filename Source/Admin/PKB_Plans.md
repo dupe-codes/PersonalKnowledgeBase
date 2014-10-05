@@ -14,6 +14,10 @@
     - Allow creation of layouts, can extend layouts
     - Allow creation of macros, preformatted snippets of markdown you can call to generate
     that markdown when needed. Pass in parameters to customize the generated markdown
+    - Support insertion of dynamically generated image tags
+    - Dynamic creation of note specific table of contents
+        - Each header is an anchor
+        - Can create links to specific sections of notes
     - Dynamic creation of links?
     - Create compiler as a python class
         - In PKB, write 'compile' script which instantiates compiler object and uses it to compile all `*.pymd` files into markdown

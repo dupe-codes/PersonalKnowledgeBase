@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Unrendered Quick Notes</h1>
+    {% for note in notes %}
+      {% if loop.first %}<ul>{% endif %}
+      <li>
+        <h3><a class="note-expand-info" id="expand-{{note.id}}">{{ note.title }} - {{ note.created.toDateString() }}</a></h3>
+        <div class="note-further-info" id="note-{{note.id}}">
+          <div class="container">
+            <h4>Category:</h4>
+            <p class="note-category">{{ note.category }}</p>
+            <h4>Content:</h4>
+            <p class="note-content">{{ note.content }}</p>
+          </div>
+          <button type="button" class="close-info" id="close-{{note.id}}">Close</button>
+        </div>
+      </li>
+      {% if loop.last %}</ul>{% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // Hide all notes extra info
+      $('.note-further-info').hide();
+
+      // Set up click handlers to expand note info
+      $('.note-expand-info').on('click', function(evt){
+        var element_id = evt.target.id;
+        var target_id = element_id.split('-')[1];
+        $('#note-' + target_id).show();
+      });
+
+      // Set up button click handlers to close note info
+      $('.close-info').on('click', function(evt){
+        evt.preventDefault();
+        var element_id = evt.target.id;
+        var target_id = element_id.split('-')[1];
+        $('#note-' + target_id).hide();
+      });
+
+    });
+  </script>
+{% endblock %}
