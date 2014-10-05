@@ -13,6 +13,7 @@ import base64
 
 import config.settings as settings
 import config.secrets as auth
+from config.template_setup import TEMPLATE_ENV
 
 # Configuration
 FLAGS = ['-d', '-f']
@@ -81,39 +82,43 @@ def render_markdown_in_dir(directory):
     print 'Rendering markdown in dir: ' + directory
     return
 
-def write_out_directory(current_dir, dir_tree, outfile, path_to):
+def write_out_directory(current_dir, dir_tree, path_to):
     """
     Recursively writes out the directory tree
 
     Links to .html files are created, and subdirs written out as lists
     within the parent directory list element
     """
-    outfile.write('<li>')
+    content = '<li>'
 
     if '.html' in current_dir:
-        outfile.write('<a href=\'' + path_to + current_dir + '\'>' + current_dir + '</a>')
+        content += '<a href=\'' + path_to + current_dir + '\'>' + current_dir + '</a>'
     else:
         directory = current_dir + '/'
-        outfile.write(directory)
+        content += directory
         sub_files = dir_tree[current_dir]
-        outfile.write('<ul>')
+        content += '<ul>'
         for sub_file in sub_files:
-            write_out_directory(sub_file, dir_tree, outfile, path_to + directory)
-        outfile.write('</ul>')
+            content += write_out_directory(sub_file, dir_tree, path_to + directory)
+        content += '</ul>'
 
-    outfile.write('</li>')
+    content += '</li>'
+    return content
 
 def make_table_of_contents(rendered):
     """ Renders the table of contents page """
     # TODO: Replace this with a better, templatized approach
     outfile = open(os.path.join(settings.RENDER_PATH, 'index.html'), 'w')
-    outfile.write('<h1>Table of Contents</h1>')
+    content = '<h1>Table of Contents</h1>'
 
     # Start recursive writing of directory tree from current directory
-    outfile.write('<ul>')
-    write_out_directory('.', rendered, outfile, './')
-    outfile.write('</ul>')
+    content += '<ul>'
+    content += write_out_directory('.', rendered, './')
+    content += '</ul>'
 
+    index_template = TEMPLATE_ENV.get_template('index.html');
+    rendered = index_template.render(content=content)
+    outfile.write(rendered);
     outfile.close()
 
 def sort_by_directories(files_list):
