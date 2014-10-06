@@ -100,10 +100,12 @@ def write_out_directory(current_dir, dir_tree, path_to):
         directory = current_dir + '/'
         content += directory
         sub_files = dir_tree[current_dir]
+        content += '<div class=\'child_files\'>\n'
         content += '<ul>'
         for sub_file in sub_files:
             content += write_out_directory(sub_file, dir_tree, path_to + directory)
         content += '</ul>'
+        content += '</div>\n'
 
     content += '</li>'
     return content
@@ -114,7 +116,7 @@ def make_table_of_contents(rendered):
     content = '<h1>Table of Contents</h1>'
 
     # Start recursive writing of directory tree from current directory
-    content += '<ul>'
+    content += '<ul class=\'contents-list\'>'
     content += write_out_directory('.', rendered, './')
     content += '</ul>'
 

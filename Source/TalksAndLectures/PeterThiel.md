@@ -96,7 +96,7 @@ Periods of globalization vs tech categorized by very different ways of talking a
 
 ## Working on Secrets
 - Are there things educational institutions can do to promote people tackling this tough "secret" problems
-    Its always really good when there is something you are really passionate about, one of the resolutions I came up with is to
+   > Its always really good when there is something you are really passionate about, one of the resolutions I came up with is to
     always value substance over status and prestigious
     I would probably still go to Stanford and might still go to Law School, but I would ask a lot more questions of WHY I was doing those things
     Too much of it was driven by status. Lasted 7 months in law firm where on the outside everyone wnated to get in but on the inside everyone wanted to get out
@@ -104,53 +104,61 @@ Periods of globalization vs tech categorized by very different ways of talking a
     Conclusion: Substance over Status
 
 - Why do you think people resist that captialism and competition are antonyms?
-    When I present this as an idea, it always seems to be news. One of the strange dynamics at Google is that there are all these
+    > When I present this as an idea, it always seems to be news. One of the strange dynamics at Google is that there are all these
     super smart people but a very small amount have been successful in starting their own companies.
     They are told that everything is going great because they have such talented people. When they start a business, they think its only
     about getting the most talented people.
     You talk about talent when you do not want to talk about monopoly.
+
 - What is interesting right now in the startup world?
-    I am always skeptical of themes. Once you have a theme, you always have quite a lot of companies in that field. You do not want
+    > I am always skeptical of themes. Once you have a theme, you always have quite a lot of companies in that field. You do not want
     to be the 20th pizza restaurant in Palo Alto.
     Big Data, Cloud Computing... really overdone, [I am] not really sure what those words mean.
     Great founders know its about having a mission and a calling. If they do not do it then no one can.
     A lot of the companies I am excited about have visions like that.
+
 - "Every form of injustice involves a secret..." Is there an important injustice only a small group of people recognize?
-    Yes but I can not tell you what it is. It would put us in an odd point if there were no more injustices left. I can speculate
+    > Yes but I can not tell you what it is. It would put us in an odd point if there were no more injustices left. I can speculate
     on some of them. They will always sound weird when you put them forward. Looking back from 2100, I think people will say
     that so many of the political and business leaders were sociopaths. Borderline sociopaths. Football is kinda where smoking was back in the 1900s... we know its bad, causes brain damage, but we are not quite ready to tackle it
 
 - [ Missed question, involving originality...]
-    Answers to "tell me something thats true..." are usually really bad. Some answers that are adequate, at least acknowledge that they are
+    > Answers to "tell me something thats true..." are usually really bad. Some answers that are adequate, at least acknowledge that they are
     bad answers. "I think that there should be more educational software companies, and I know how unoriginal that is."
     People always thing originality is easy... but its really hard and incredibly rare.
+
 - Assessment of the success of the thiel fellowship?
-    It was sort of an unconventional program... Have 20 students drop out of school. 83 people have gone through the program and I think
+    > It was sort of an unconventional program... Have 20 students drop out of school. 83 people have gone through the program and I think
     its been a powerful experience for almost all the people that have gone through it.
     We have raised about 60 million in VC funding in aggregate. It really has captured a lot around the zeitgeist.
     I am always portrayed as a person who is against college. The problem with higher education is that it is too conventional. Go to Yale of go to jail... we do not want our society to be structured that way.
     Lots of questions that people are asking about higher education.
+
 - Did you learn anything in law school that you found helpful?
-    Two things that apply in startup world. One part that I am always focused on is the structure of companies and how well are people
+    > Two things that apply in startup world. One part that I am always focused on is the structure of companies and how well are people
     aligned. I think it is a very legal kind of framework: what are peoples alignments and motivations? You want formal and informal alignments
     I like to ask founders, "how did you meet? What is the prehistory of the company?" A bad answer: "We met a week ago at a business conference."
     A better answer: "We've been talking about it for a long time... Complementary skills." I will say nonlawyers in business tend to make one of two mistakes: They either think of the law as irrelevant or the law as all\-important. You either end up breaking lots of laws or you probably end up handicapped by the law.
+
 - Can the monopoly be too big? When is it too big?
-    From the inside, monopoly is always a good idea. Much more debatable from the outside. They deserve the bad rep in a static world where nothing changes. A good monopoly is one that has invented something new. Apple had a monopoly on the iPhone/smartphones. In a dynamic context, that is a monopoly that creates something new, which is good. The question is: how static is technology? I think the gov has gotten wrong historically. Went after IBM just when things were going from hardware to software... Very often the intervention has been a little too late.
+> From the inside, monopoly is always a good idea. Much more debatable from the outside. They deserve the bad rep in a static world where nothing changes. A good monopoly is one that has invented something new. Apple had a monopoly on the iPhone/smartphones. In a dynamic context, that is a monopoly that creates something new, which is good. The question is: how static is technology? I think the gov has gotten wrong historically. Went after IBM just when things were going from hardware to software... Very often the intervention has been a little too late.
+
 - What is the relationship between keeping a secret and disclosing it? When should companies disclose their secrets?
-    If you tell nobody about it, theres not much you can do with it. If you tell everyone, ends up diluting it. I define a great company
+> If you tell nobody about it, theres not much you can do with it. If you tell everyone, ends up diluting it. I define a great company
     as a group of people who have a secret. You tell just the right amount of people, the people in the company.
     I am skeptical about patent laws, I do not think they work well in practice, but the idea behind them is a good one. How do you preserve your secret in a way that is valuable for a long time?
+
 - Twitter comments
-    There always are sensitive microphones all over the place. Comments to the effect of "I think it is a rather mismanaged company. Maybe lots of marijuana smoking going on.." I think Twitter is actually a fantastic business... fantastic core idea. You do not have to be operationally that airtight as a monopoly business. When you have a business like Twitter, you often do not have to be run all that wel When you have a business like Twitter, you often do not have to be run all that welll
+> There always are sensitive microphones all over the place. Comments to the effect of "I think it is a rather mismanaged company. Maybe lots of marijuana smoking going on.." I think Twitter is actually a fantastic business... fantastic core idea. You do not have to be operationally that airtight as a monopoly business. When you have a business like Twitter, you often do not have to be run all that wel When you have a business like Twitter, you often do not have to be run all that welll
 
 - Influence of libertarian philosophy on your thinking
-    I describe myself as libertarian in that I am socially liberal and fiscally more conservative. I am more of a
+> I describe myself as libertarian in that I am socially liberal and fiscally more conservative. I am more of a
     political atheist. I do no believe that the political system is where we solve our problems. I do not think things
     will change that much. I focus on tech as a way to change things.
     Could the gov be doing more to foster tech and science? It seems much less capable of doing things today, but has in the past.
     You get a sense that you could not do a Manhattan project or the Apollo program today. I think we should explore why there
     has been such a decline in competence today.
+
 - Star Trek or Star Wars?
-    Pro-Star Wars, because star wars is pro capitalist and star trek is more communist. The whole plot line is driven by the fact that
+> Pro-Star Wars, because star wars is pro capitalist and star trek is more communist. The whole plot line is driven by the fact that
     Han Solo needs to pay off his debts.
