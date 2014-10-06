@@ -57,6 +57,8 @@ need re-rendering
         - Then locally run a script that makes a separate request to the web app to get
         new quicknotes and adds them to the PKB
 - Incorporate categories to save notes in specific directories
+- When quick note saved, automatically send to github to be rendered and save rendered html
+- Write script that pulls saved, rendered notes and just adds them to filesystem
 
 ## Fun Subplans
 - Write a live-streaming twitter feed script

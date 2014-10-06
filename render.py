@@ -44,7 +44,10 @@ def render_markdown(md_file_path):
 
     # Write contents to destination path
     write_file = open(os.path.join(settings.RENDER_PATH, md_file_path), 'w')
-    write_file.write(response.text)
+    # TODO: Replace with template specific to notes
+    template = TEMPLATE_ENV.get_template('index.html')
+    result = template.render(content=response.text)
+    write_file.write(result)
 
     # Return path to file created
     return md_file_path
@@ -107,7 +110,6 @@ def write_out_directory(current_dir, dir_tree, path_to):
 
 def make_table_of_contents(rendered):
     """ Renders the table of contents page """
-    # TODO: Replace this with a better, templatized approach
     outfile = open(os.path.join(settings.RENDER_PATH, 'index.html'), 'w')
     content = '<h1>Table of Contents</h1>'
 
