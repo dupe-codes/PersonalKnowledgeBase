@@ -59,6 +59,8 @@ need re-rendering
 - Incorporate categories to save notes in specific directories
 - When quick note saved, automatically send to github to be rendered and save rendered html
 - Write script that pulls saved, rendered notes and just adds them to filesystem
+- In quick note view, add ability to delete a note
+- Need to add navbar to quick notes views
 
 ## Fun Subplans
 - Write a live-streaming twitter feed script
