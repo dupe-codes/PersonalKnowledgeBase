@@ -8,5 +8,19 @@
 
 {% block footer %}
   <script type="text/javascript">
+
+    $(document).ready(function() {
+      // Display the root directory's contents
+      var root_entry = $('#contents-list').children().first();
+      var root_subchildren = root_entry.children().eq(1);
+      root_subchildren.show();
+
+      // Event handler to open directory contents on mouse click
+      $('.open-directory').on('click', function(evt) {
+        var element_subchildren = $(evt.target).siblings().first();
+        element_subchildren.show();
+      });
+    });
+
   </script>
 {% endblock %}

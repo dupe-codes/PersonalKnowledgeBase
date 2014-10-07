@@ -98,7 +98,7 @@ def write_out_directory(current_dir, dir_tree, path_to):
         content += '<a href=\'' + path_to + current_dir + '\'>' + current_dir + '</a>'
     else:
         directory = current_dir + '/'
-        content += directory
+        content += '<a class=\'open-directory\'>' + directory + '</a>'
         sub_files = dir_tree[current_dir]
         content += '<div class=\'child_files\'>\n'
         content += '<ul>'
@@ -116,7 +116,7 @@ def make_table_of_contents(rendered):
     content = '<h1>Table of Contents</h1>'
 
     # Start recursive writing of directory tree from current directory
-    content += '<ul class=\'contents-list\'>'
+    content += '<ul id=\'contents-list\'>'
     content += write_out_directory('.', rendered, './')
     content += '</ul>'
 

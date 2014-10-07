@@ -1,0 +1,12 @@
+/* Styling for table of content page */
+
+.child_files {
+  display: none;
+}
+
+.open-directory {
+}
+
+.open-directory:hover {
+  cursor: pointer;
+}

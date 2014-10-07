@@ -6,6 +6,7 @@
 
     <!-- CSS stylsheets go here -->
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 
     <!-- Javascript files -->
     <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
@@ -28,35 +29,35 @@
     <div class="container">
       
   <div class="container">
-    <h1>Table of Contents</h1><ul class='contents-list'><li>./<div class='child_files'>
-<ul><li>Admin/<div class='child_files'>
+    <h1>Table of Contents</h1><ul id='contents-list'><li><a class='open-directory'>./</a><div class='child_files'>
+<ul><li><a class='open-directory'>Admin/</a><div class='child_files'>
 <ul><li><a href='././Admin/PKB_Plans.html'>PKB_Plans.html</a></li></ul></div>
-</li><li>Projects/<div class='child_files'>
-<ul><li>Wellness/<div class='child_files'>
+</li><li><a class='open-directory'>Projects/</a><div class='child_files'>
+<ul><li><a class='open-directory'>Wellness/</a><div class='child_files'>
 <ul><li><a href='././Projects/Wellness/feature_ideas.html'>feature_ideas.html</a></li></ul></div>
-</li><li>Startups/<div class='child_files'>
+</li><li><a class='open-directory'>Startups/</a><div class='child_files'>
 <ul><li><a href='././Projects/Startups/usefulResources.html'>usefulResources.html</a></li></ul></div>
 </li></ul></div>
-</li><li>QuickNotes/<div class='child_files'>
+</li><li><a class='open-directory'>QuickNotes/</a><div class='child_files'>
 <ul><li><a href='././QuickNotes/pitching_notes.html'>pitching_notes.html</a></li></ul></div>
-</li><li><a href='././README.html'>README.html</a></li><li>TalksAndLectures/<div class='child_files'>
+</li><li><a href='././README.html'>README.html</a></li><li><a class='open-directory'>TalksAndLectures/</a><div class='child_files'>
 <ul><li><a href='././TalksAndLectures/PeterThiel.html'>PeterThiel.html</a></li></ul></div>
-</li><li>Tools/<div class='child_files'>
+</li><li><a class='open-directory'>Tools/</a><div class='child_files'>
 <ul><li><a href='././Tools/toolsList.html'>toolsList.html</a></li><li><a href='././Tools/gitNotes.html'>gitNotes.html</a></li><li><a href='././Tools/pythonNotes.html'>pythonNotes.html</a></li><li><a href='././Tools/vimNotes.html'>vimNotes.html</a></li></ul></div>
-</li><li>Class/<div class='child_files'>
-<ul><li>CS183B/<div class='child_files'>
+</li><li><a class='open-directory'>Class/</a><div class='child_files'>
+<ul><li><a class='open-directory'>CS183B/</a><div class='child_files'>
 <ul><li><a href='././Class/CS183B/AdoraCheung.html'>AdoraCheung.html</a></li></ul></div>
-</li><li>CS122/<div class='child_files'>
+</li><li><a class='open-directory'>CS122/</a><div class='child_files'>
 <ul><li><a href='././Class/CS122/HistoryPhilosophyOfAI.html'>HistoryPhilosophyOfAI.html</a></li><li><a href='././Class/CS122/BradTempleton.html'>BradTempleton.html</a></li></ul></div>
-</li><li>History3/<div class='child_files'>
+</li><li><a class='open-directory'>History3/</a><div class='child_files'>
 <ul><li><a href='././Class/History3/Lecture1.html'>Lecture1.html</a></li></ul></div>
 </li></ul></div>
-</li><li>Resources/<div class='child_files'>
+</li><li><a class='open-directory'>Resources/</a><div class='child_files'>
 <ul><li><a href='././Resources/services.html'>services.html</a></li><li><a href='././Resources/ReadingList.html'>ReadingList.html</a></li></ul></div>
-</li><li>WorkNotes/<div class='child_files'>
-<ul><li>EdX/<div class='child_files'>
+</li><li><a class='open-directory'>WorkNotes/</a><div class='child_files'>
+<ul><li><a class='open-directory'>EdX/</a><div class='child_files'>
 <ul><li><a href='././WorkNotes/EdX/keyword_substitution.html'>keyword_substitution.html</a></li></ul></div>
-</li><li><a href='././WorkNotes/YCPitch.html'>YCPitch.html</a></li><li>VHIL/<div class='child_files'>
+</li><li><a href='././WorkNotes/YCPitch.html'>YCPitch.html</a></li><li><a class='open-directory'>VHIL/</a><div class='child_files'>
 <ul><li><a href='././WorkNotes/VHIL/ModelingTexturesNotes.html'>ModelingTexturesNotes.html</a></li></ul></div>
 </li></ul></div>
 </li></ul></div>
@@ -68,6 +69,20 @@
 
   <footer>
   <script type="text/javascript">
+
+    $(document).ready(function() {
+      // Display the root directory's contents
+      var root_entry = $('#contents-list').children().first();
+      var root_subchildren = root_entry.children().eq(1);
+      root_subchildren.show();
+
+      // Event handler to open directory contents on mouse click
+      $('.open-directory').on('click', function(evt) {
+        var element_subchildren = $(evt.target).siblings().first();
+        element_subchildren.show();
+      });
+    });
+
   </script>
 </footer>
 </html>
