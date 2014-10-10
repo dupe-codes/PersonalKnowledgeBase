@@ -11,8 +11,8 @@ SOURCE_PATH = 'Source/'
 # Where rendered files all live
 RENDER_PATH = 'Rendered/'
 
-# Exclude all files in these directors when rendering
-EXCLUDED = ['Rendered', 'logs', 'Secret']
+# Exclude all files in these directories when rendering
+EXCLUDED = ['Rendered', 'logs', 'Secret', 'Class']
 
 # Path where templates folder lives
 TEMPLATE_PATH = '../public/templates/'
