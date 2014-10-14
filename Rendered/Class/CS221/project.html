@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> New Note </title>
+
+    <!-- CSS stylsheets go here -->
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- Javascript files -->
+    <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Dup's Knowledge</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/notes/new">New Quick Note</a></li>
+            <li><a href="/notes/list">Currently Saved Notes</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+  <div class="container">
+    <h1>
+<a name="user-content-ai-group-project" class="anchor" href="#ai-group-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>AI Group Project</h1>
+
+<h1>
+<a name="user-content-rap-project" class="anchor" href="#rap-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rap Project</h1>
+
+<ul>
+<li><h2>
+<a name="user-content-inputoutput-behavior" class="anchor" href="#inputoutput-behavior" aria-hidden="true"><span class="octicon octicon-link"></span></a>Input/Output Behavior</h2></li>
+<li><h2>
+<a name="user-content-project-scope" class="anchor" href="#project-scope" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Scope</h2></li>
+<li><h2>
+<a name="user-content-metric-for-success" class="anchor" href="#metric-for-success" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metric for Success</h2></li>
+<li><h2>
+<a name="user-content-concrete-examples-of-inputs-and-outputs" class="anchor" href="#concrete-examples-of-inputs-and-outputs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concrete Examples of Inputs and Outputs</h2></li>
+<li><h2>
+<a name="user-content-baseline-and-oracle" class="anchor" href="#baseline-and-oracle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Baseline and Oracle</h2></li>
+<li><h2>
+<a name="user-content-challenges-techniques-to-address-them" class="anchor" href="#challenges-techniques-to-address-them" aria-hidden="true"><span class="octicon octicon-link"></span></a>Challenges, techniques to address them</h2></li>
+<li><h2>
+<a name="user-content-similar-projects" class="anchor" href="#similar-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Similar Projects</h2></li>
+</ul>
+
+<h1>
+<a name="user-content-facebook-spamnegative-comments-detection" class="anchor" href="#facebook-spamnegative-comments-detection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facebook Spam/Negative Comments Detection</h1>
+
+<ul>
+<li>
+<h2>
+<a name="user-content-inputoutput-behavior-1" class="anchor" href="#inputoutput-behavior-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Input/Output Behavior</h2>
+
+<ul>
+<li>Given a facebook post, output whether it is off topic or derogatory</li>
+</ul>
+</li>
+<li>
+<h2>
+<a name="user-content-project-scope-1" class="anchor" href="#project-scope-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Scope</h2>
+
+<ul>
+<li>The scope of the problem doesn't seem very large. Each input would be a single facebook
+post or comment, and we can acquire a great deal of data by scraping the Facebook groups we are all
+a part of using the Facebook API. We would manually have to categorize the data we collect as either
+on/off topic or derogatory/non-derogatory, but we could write some basic scripts to make this process
+as painless as possible. </li>
+<li>It seems reasonable to say that we can build a system that determines whether or not a post is on topic, especially
+with the great deal of data that is available.</li>
+<li>We could potentially expand the scope past just facebook. Given enough data, we could determine whether a post
+is appropriate on any internet forum. That might expand the scope, but it doesn't seem like it would by much.</li>
+</ul>
+</li>
+<li>
+<h2>
+<a name="user-content-metric-for-success-1" class="anchor" href="#metric-for-success-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metric for Success</h2>
+
+<ul>
+<li>How many posts are correctly classified?
+
+<ul>
+<li>Here is where an issue arises: In the project spec, they state that applying binary classification is probably not enough.
+
+<ul>
+<li>They claim its too narrow...</li>
+</ul>
+</li>
+<li>So what would be a better metric for success?
+
+<ul>
+<li>Maybe we could expand it a bit so that given a set of posts in a group, our system determines to what degree the community
+of the group is welcoming?
+
+<ul>
+<li>That could be interesting!</li>
+<li>But that seems to be a very qualitative metric. How would we measure that?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h2>
+<a name="user-content-concrete-examples-of-inputs-and-outputs-1" class="anchor" href="#concrete-examples-of-inputs-and-outputs-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concrete Examples of Inputs and Outputs</h2>
+
+<ul>
+<li>I can write up a web scraper to get this by the end of the week</li>
+</ul>
+</li>
+<li>
+<h2>
+<a name="user-content-baseline-and-oracle-1" class="anchor" href="#baseline-and-oracle-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Baseline and Oracle</h2>
+
+<ul>
+<li>An easy baseline would just be binary classification using word features.</li>
+<li>But what would we use as an Oracle...?
+
+<ul>
+<li>Ripped straight from the example in the project proposal: determine if a post is on topic based on the number of comments?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2>
+<a name="user-content-challenges-techniques-to-address-them-1" class="anchor" href="#challenges-techniques-to-address-them-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Challenges, techniques to address them</h2></li>
+<li>
+<h2>
+<a name="user-content-similar-projects-1" class="anchor" href="#similar-projects-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Similar Projects</h2>
+
+<ul>
+<li>Where I got the idea, some dudes built a similar system as a hackathon: <a href="https://github.com/jxnl/fbmarkandsweep/tree/master/old_version/src/utils">Facebook mark and sweep</a>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+    </div>
+  </body>
+
+  <footer>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      // Display the root directory's contents
+      var root_entry = $('#contents-list').children().first();
+      var root_subchildren = root_entry.children().eq(1);
+      root_subchildren.show();
+
+      // Event handler to open directory contents on mouse click
+      $('.open-directory').on('click', function(evt) {
+        var element_subchildren = $(evt.target).siblings().first();
+        element_subchildren.show();
+      });
+    });
+
+  </script>
+</footer>
+</html>

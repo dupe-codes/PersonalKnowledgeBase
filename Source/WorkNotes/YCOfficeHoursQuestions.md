@@ -18,12 +18,14 @@
         - Or will the mere fact is exists tigger change?
     - What was your initial reaction to the idea?
 
+
 - His Story
     - Why did you choose to not follow the corporate life?
     - How many side projects did you work on until you knew 'this is it?'
         - How do you know that 'this is it?'
     - How did you know being a founder is what you wanted?
     - What has your experience as a founder been like?
+
 
 - Practical Questions
     - Monetization
@@ -35,6 +37,7 @@
     - Market Research?
         - How much time do you spend on it?
         - What should you be looking for?
+
 
 - Other Assorted Thoughts
     - Working towards social impact

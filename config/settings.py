@@ -12,7 +12,7 @@ SOURCE_PATH = 'Source/'
 RENDER_PATH = 'Rendered/'
 
 # Exclude all files in these directories when rendering
-EXCLUDED = ['Rendered', 'logs', 'Secret', 'Class']
+EXCLUDED = ['Rendered', 'logs', 'Secret']
 
 # Path where templates folder lives
 TEMPLATE_PATH = '../public/templates/'
