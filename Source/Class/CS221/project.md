@@ -28,7 +28,7 @@
     post or comment, and we can acquire a great deal of data by scraping the Facebook groups we are all
     a part of using the Facebook API. We would manually have to categorize the data we collect as either
     on/off topic or derogatory/non-derogatory, but we could write some basic scripts to make this process
-    as painless as possible. 
+    as painless as possible.
     - It seems reasonable to say that we can build a system that determines whether or not a post is on topic, especially
     with the great deal of data that is available.
     - We could potentially expand the scope past just facebook. Given enough data, we could determine whether a post
