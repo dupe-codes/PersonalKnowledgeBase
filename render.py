@@ -45,7 +45,7 @@ def render_markdown(md_file_path):
     # Write contents to destination path
     write_file = open(os.path.join(settings.RENDER_PATH, md_file_path), 'w')
     # TODO: Replace with template specific to notes
-    template = TEMPLATE_ENV.get_template('index.html')
+    template = TEMPLATE_ENV.get_template('note.html')
     result = template.render(content=response.text)
     write_file.write(result)
 
@@ -64,7 +64,6 @@ def render_all_markdown():
 
     # Run through and render all .md files in repo
     for dirname, subdirs, files in os.walk(settings.SOURCE_PATH):
-        # Skip directory if it is part of a directory to be excluded
         if any(excluded in dirname for excluded in settings.EXCLUDED):
             continue
 

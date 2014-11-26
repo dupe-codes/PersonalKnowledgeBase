@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> New Note </title>
+    <title> Dup's Knowledge </title>
 
     <!-- CSS stylsheets go here -->
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
@@ -30,10 +30,10 @@
       
   <div class="container">
     <h1>
-<a name="user-content-current-plan" class="anchor" href="#current-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Plan</h1>
+<a id="user-content-current-plan" class="anchor" href="#current-plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Plan</h1>
 
 <h2>
-<a name="user-content-main-plans" class="anchor" href="#main-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Plans</h2>
+<a id="user-content-main-plans" class="anchor" href="#main-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Main Plans</h2>
 
 <ul>
 <li>House everything within this git repository under strict version control</li>
@@ -108,7 +108,7 @@ need re-rendering</p></li>
 </ul>
 
 <h2>
-<a name="user-content-quick-note-functionality" class="anchor" href="#quick-note-functionality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Note Functionality</h2>
+<a id="user-content-quick-note-functionality" class="anchor" href="#quick-note-functionality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Note Functionality</h2>
 
 <ul>
 <li>Create a simple app that saves quick notes into the PKB
@@ -158,7 +158,7 @@ new quicknotes and adds them to the PKB</li>
 </ul>
 
 <h2>
-<a name="user-content-fun-subplans" class="anchor" href="#fun-subplans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fun Subplans</h2>
+<a id="user-content-fun-subplans" class="anchor" href="#fun-subplans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fun Subplans</h2>
 
 <ul>
 <li>Write a live-streaming twitter feed script</li>
@@ -166,7 +166,7 @@ new quicknotes and adds them to the PKB</li>
 </ul>
 
 <h2>
-<a name="user-content-possible-ways-to-make-this-more-powerful" class="anchor" href="#possible-ways-to-make-this-more-powerful" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible ways to make this more powerful</h2>
+<a id="user-content-possible-ways-to-make-this-more-powerful" class="anchor" href="#possible-ways-to-make-this-more-powerful" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible ways to make this more powerful</h2>
 
 <ul>
 <li>Look into markdown syntax extensions (footnotes, super/subscripts, etc.)</li>
@@ -184,22 +184,5 @@ new quicknotes and adds them to the PKB</li>
     </div>
   </body>
 
-  <footer>
-  <script type="text/javascript">
-
-    $(document).ready(function() {
-      // Display the root directory's contents
-      var root_entry = $('#contents-list').children().first();
-      var root_subchildren = root_entry.children().eq(1);
-      root_subchildren.show();
-
-      // Event handler to open directory contents on mouse click
-      $('.open-directory').on('click', function(evt) {
-        var element_subchildren = $(evt.target).siblings().first();
-        element_subchildren.show();
-      });
-    });
-
-  </script>
-</footer>
+  <footer></footer>
 </html>

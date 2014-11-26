@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> New Note </title>
+    <title> Dup's Knowledge </title>
 
     <!-- CSS stylsheets go here -->
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
@@ -30,15 +30,15 @@
       
   <div class="container">
     <h1>
-<a name="user-content-python-notes" class="anchor" href="#python-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Notes</h1>
+<a id="user-content-python-notes" class="anchor" href="#python-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python Notes</h1>
 
 <p>Tips, tricks, and knowledge acquired on my road to becoming a true Pythonista</p>
 
 <h1>
-<a name="user-content-useful-commands" class="anchor" href="#useful-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful Commands</h1>
+<a id="user-content-useful-commands" class="anchor" href="#useful-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful Commands</h1>
 
 <h2>
-<a name="user-content-style-checks" class="anchor" href="#style-checks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Style Checks</h2>
+<a id="user-content-style-checks" class="anchor" href="#style-checks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Style Checks</h2>
 
 <pre><code>for FILE in `git diff --name-only HEAD~1 | grep '.py$'`; do pep8 $FILE; done
 for FILE in `git diff --name-only HEAD~1 | grep '.py$'`; do pylint $file; done
@@ -49,22 +49,5 @@ for FILE in `git diff --name-only HEAD~1 | grep '.py$'`; do pylint $file; done
     </div>
   </body>
 
-  <footer>
-  <script type="text/javascript">
-
-    $(document).ready(function() {
-      // Display the root directory's contents
-      var root_entry = $('#contents-list').children().first();
-      var root_subchildren = root_entry.children().eq(1);
-      root_subchildren.show();
-
-      // Event handler to open directory contents on mouse click
-      $('.open-directory').on('click', function(evt) {
-        var element_subchildren = $(evt.target).siblings().first();
-        element_subchildren.show();
-      });
-    });
-
-  </script>
-</footer>
+  <footer></footer>
 </html>
